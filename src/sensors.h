@@ -10,8 +10,8 @@
  ************************/
 
 #define SENSOR_PIN                          5
-#define SENSOR_DETECTED                     1
-#define SENSOR_NOT_DETECTED                 0
+#define SENSOR_DETECTED                     0
+#define SENSOR_NOT_DETECTED                 1
 
 #define MICROSWITCH_PIN                     6
 #define MICROSWITCH_DETECTED                0
@@ -76,5 +76,10 @@ uint8_t get_start_motor_2(void);
 uint8_t get_open_valve_2(void);
 uint8_t get_timer_valve_2(void);
 uint8_t get_sensor_onoff_2(void);
+
+void motor_on(void);
+void motor_off(void);
+void valve_on(void);
+void valve_off(void);
 
 #endif

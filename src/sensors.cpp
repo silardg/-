@@ -101,6 +101,13 @@ uint8_t get_sensor_onoff_2(void) {
 
 }
 
+void motor_on(void) { digitalWrite(KONTAKTOR_RELAY_PIN, HIGH); }
+void motor_off(void) { digitalWrite(KONTAKTOR_RELAY_PIN, LOW); }
+
+void valve_on(void) { digitalWrite(VALVE_RELAY_PIN, HIGH); }
+void valve_off(void) { digitalWrite(VALVE_RELAY_PIN, LOW); }
+
+
 void init_sensors(void) {
     
     // sensor board - 6
@@ -120,4 +127,7 @@ void init_sensors(void) {
     // relay board 
     pinMode(KONTAKTOR_RELAY_PIN, OUTPUT);
     pinMode(VALVE_RELAY_PIN, OUTPUT);
+
+    motor_off();
+    valve_off();
 }
